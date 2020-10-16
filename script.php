@@ -19,9 +19,9 @@ try {
 
     writeToLog($msg);
 
-    // if ($matchesSoldOut == 0 || $matchesComingSoon > 0) {
+    if ($matchesSoldOut == 0 || $matchesComingSoon > 0) {
         sendNotifications();
-    // }
+    }
 } Catch (Exception $e){
     $msg = date('Y-m-d H:i:s') . ' : Exception: ' . $e->getMessage();
     writeToLog($msg);
